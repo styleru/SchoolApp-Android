@@ -5,13 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".RegistrationActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="20dp">
+        <include layout="@layout/toolbar"/>
 
         <TextView
             android:id="@+id/Info"
@@ -67,12 +64,12 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:text="Я согласен (-сна) с условияемями пользовательского соглашения "/>
+            android:text="Я согласен(-сна) с условияемями пользовательского соглашения "/>
 
         <Button
             android:id="@+id/enterButton"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"
@@ -82,7 +79,29 @@
             android:textAllCaps="false"
             android:textColorHint="#000" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+
+            <TextView
+                android:id="@+id/Password"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="Уже есть аккаунт?"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="Sign In"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="14dp" />
+        </LinearLayout>
+
     </LinearLayout>
-
-
-</LinearLayout>
