@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">schoolApp</string>
+    <string name="open">Открыть</string>
+    <string name="close">Закраыть</string>
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navAccount"
+        android:title="Личный кабинет"/>
+
+    <item android:id="@+id/navCourses"
+        android:title="Мои курсы"/>
+
+    <item android:id="@+id/navTimeTable"
+        android:title="Расписание"/>
+
+    <item android:id="@+id/navDialogs"
+        android:title="Диалоги"/>
+
+    <item android:id="@+id/navHomeWork"
+        android:title="Домашнее задание"/>
+
+    <item android:id="@+id/navExit"
+        android:title="Выход"/>
+
+</menu>
