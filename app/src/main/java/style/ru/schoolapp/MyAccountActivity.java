@@ -20,16 +20,9 @@ public class MyAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_account);
 
-        ImageView userImage = findViewById(R.id.userImage);
         Toolbar toolbar = findViewById(R.id.toolbar);
-
         toolbar.setTitle("Личный кабинет");
         setSupportActionBar(toolbar);
-
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.defaultuserimage);
-        RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
-        roundedBitmapDrawable.setCircular(true);
-        userImage.setImageDrawable(roundedBitmapDrawable);
 
 
     }
