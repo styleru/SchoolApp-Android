@@ -12,10 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MyAccountActivity extends Fragment{
-
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle toggle;
+public class MyAccountActivity extends Fragment {
 
     @Nullable
     @Override
@@ -42,12 +39,4 @@ public class MyAccountActivity extends Fragment{
 //        toggle.syncState();
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     //}
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (toggle.onOptionsItemSelected(item)) {
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 }

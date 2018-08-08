@@ -8,9 +8,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class NavigationDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -38,6 +42,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container, new MyAccountActivity()).commit();
             navigationView.setCheckedItem(R.id.navAccount);
+            getSupportActionBar().setTitle("Личный кабинет");
         }
     }
 
@@ -56,18 +61,25 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
             case R.id.navAccount:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
                         new MyAccountActivity()).commit();
+                getSupportActionBar().setTitle("Личный кабинет");
                 break;
             case R.id.navCourses:
-                Toast.makeText(this, "Timetable screen", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
+                        new AllCoursesActivity()).commit();
+                getSupportActionBar().setTitle("Мои курсы");
+                initImageBitmaps();
                 break;
             case R.id.navTimeTable:
                 Toast.makeText(this, "Timetable screen", Toast.LENGTH_SHORT).show();
+                getSupportActionBar().setTitle("Расписание");
                 break;
             case R.id.navDialogs:
                 Toast.makeText(this, "Dialogs screen", Toast.LENGTH_SHORT).show();
+                getSupportActionBar().setTitle("Диалоги");
                 break;
             case R.id.navHomeWork:
                 Toast.makeText(this, "Homework screen", Toast.LENGTH_SHORT).show();
+                getSupportActionBar().setTitle("Домашнее задание");
                 break;
             case R.id.navExit:
                 Toast.makeText(this, "Exit action", Toast.LENGTH_SHORT).show();
@@ -75,5 +87,29 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private ArrayList<String> names = new ArrayList<>();
+    private ArrayList<String> imageUrls = new ArrayList<>();
+
+    private void initImageBitmaps() {
+        for (int i = 0; i < 5; i++) {
+            names.add("Android");
+            imageUrls.add("https://bk-stavki.ru/wp-content/uploads/2017/08/1470558853_kak-ustanovit-dva-prilozheniya-na-android.jpg");
+
+            names.add("IOS");
+            imageUrls.add("https://pbs.twimg.com/media/DZDj-MUWkAAwB74.jpg");
+
+            names.add("Python");
+            imageUrls.add("https://cdnhtml5hive.azureedge.net/wp-content/uploads/2016/05/python-1024x576.jpg?x25428");
+        }
+        //initRecyclerView()
+    }
+
+    private void initRecyclerView() {
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, names, imageUrls);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
