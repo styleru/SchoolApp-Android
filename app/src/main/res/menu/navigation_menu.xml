@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/navAccount"
+            android:title="Личный кабинет"
+            android:icon="@drawable/account"/>
 
-    <item android:id="@+id/navAccount"
-        android:title="Личный кабинет"/>
+        <item android:id="@+id/navCourses"
+            android:title="Мои курсы"
+            android:icon="@drawable/courses"/>
 
-    <item android:id="@+id/navCourses"
-        android:title="Мои курсы"/>
+        <item android:id="@+id/navTimeTable"
+            android:title="Расписание"
+            android:icon="@drawable/timetable"/>
 
-    <item android:id="@+id/navTimeTable"
-        android:title="Расписание"/>
+        <item android:id="@+id/navDialogs"
+            android:title="Диалоги"
+            android:icon="@drawable/dialogs"/>
 
-    <item android:id="@+id/navDialogs"
-        android:title="Диалоги"/>
+        <item android:id="@+id/navHomeWork"
+            android:title="Домашнее задание"
+            android:icon="@drawable/assignment"/>
 
-    <item android:id="@+id/navHomeWork"
-        android:title="Домашнее задание"/>
-
-    <item android:id="@+id/navExit"
-        android:title="Выход"/>
-
+        <item android:id="@+id/navExit"
+            android:title="Выход"
+            android:icon="@drawable/exit"/>
+    </group>
 </menu>
+
