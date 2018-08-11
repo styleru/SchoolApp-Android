@@ -22,6 +22,10 @@
             android:title="Домашнее задание"
             android:icon="@drawable/assignment"/>
 
+        <item android:id="@+id/navAndroidCourse"
+            android:icon="@drawable/assignment"
+            android:title="Android" />
+
         <item android:id="@+id/navExit"
             android:title="Выход"
             android:icon="@drawable/exit"/>

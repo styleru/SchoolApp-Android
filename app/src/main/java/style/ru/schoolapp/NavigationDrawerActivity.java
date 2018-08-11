@@ -82,6 +82,11 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
                 Toast.makeText(this, "Homework screen", Toast.LENGTH_SHORT).show();
                 getSupportActionBar().setTitle("Домашнее задание");
                 break;
+            case R.id.navAndroidCourse:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
+                        new SingleCourseActivity()).commit();
+                getSupportActionBar().setTitle("Android");
+                break;
             case R.id.navExit:
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);

@@ -8,8 +8,6 @@
     android:orientation="vertical"
     tools:context=".SingleCourseActivity">
 
-    <include layout="@layout/toolbar"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +25,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/userImage"
-                android:src="@drawable/androidcourseimage"/>
+                android:src="@drawable/defaultuserimage"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,8 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/user"
-                android:text="Описание курса:"
-                android:textColor="#000"
+                android:text="Описание курса"
+                android:textColor="#424242"
                 android:textSize="18sp"
                 android:src="@drawable/defaultuserimage"/>
 
@@ -60,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Курсы Android разработки"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="#000"/>
 
         </LinearLayout>
@@ -74,15 +72,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Программа:"
+                android:text="Программа"
                 android:textSize="18sp"
-                android:textColor="#000"/>
+                android:textColor="#424242"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Программа курсов"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="#000"/>
 
         </LinearLayout>
@@ -91,9 +89,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Преподаватели:"
+            android:text="Преподаватели"
             android:textSize="18sp"
-            android:textColor="#000"/>
+            android:textColor="#424242"/>
 
         <LinearLayout
             android:layout_width="match_parent"
