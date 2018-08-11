@@ -7,36 +7,39 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 public class MyAccountActivity extends Fragment {
+
+    private ArrayList<String> names = new ArrayList<>();
+    private ArrayList<String> imageUrls = new ArrayList<>();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_my_account, container, false);
+        View view = inflater.inflate(R.layout.activity_my_account, container, false);
+
+        names.add("Android");
+        imageUrls.add("https://bk-stavki.ru/wp-content/uploads/2017/08/1470558853_kak-ustanovit-dva-prilozheniya-na-android.jpg");
+
+        names.add("Python");
+        imageUrls.add("https://cdnhtml5hive.azureedge.net/wp-content/uploads/2016/05/python-1024x576.jpg?x25428");
+
+        names.add("IOS");
+        imageUrls.add("https://pbs.twimg.com/media/DZDj-MUWkAAwB74.jpg");
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), names, imageUrls);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        return view;
     }
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_my_account);
-//
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Личный кабинет");
-
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-//        //actionBar.setHomeAsUpIndicator(R.drawable.ic_launcher_background);
-//
-//        drawerLayout = findViewById(R.id.drawer);
-//        toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
-//        drawerLayout.addDrawerListener(toggle);
-//        toggle.syncState();
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    //}
 }

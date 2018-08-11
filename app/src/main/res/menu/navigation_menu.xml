@@ -7,7 +7,7 @@
             android:icon="@drawable/account"/>
 
         <item android:id="@+id/navCourses"
-            android:title="Мои курсы"
+            android:title="Все курсы"
             android:icon="@drawable/courses"/>
 
         <item android:id="@+id/navTimeTable"
