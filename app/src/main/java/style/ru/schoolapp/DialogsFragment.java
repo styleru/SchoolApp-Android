@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import style.ru.schoolapp.model.DialogsAdapter;
+import style.ru.schoolapp.model.DialogsListAdapter;
 import style.ru.schoolapp.presenter.DialogsPresenter;
 import style.ru.schoolapp.view.DialogsView;
 
@@ -23,6 +24,7 @@ import style.ru.schoolapp.view.DialogsView;
  */
 
 public class DialogsFragment extends MvpAppCompatFragment implements DialogsView {
+    public static final String TAG = DialogsFragment.class.getSimpleName();
 
     @InjectPresenter
     DialogsPresenter presenter;
@@ -38,8 +40,21 @@ public class DialogsFragment extends MvpAppCompatFragment implements DialogsView
         ButterKnife.bind(this, view);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        recyclerView.setAdapter(new DialogsAdapter());
+        recyclerView.setAdapter(new DialogsListAdapter(presenter));
 
         return view;
+    }
+
+    @Override
+    public void openSpecificDialog() {
+        Log.i(TAG, "openSpecificDialog: ");
+        getFragmentManager().beginTransaction()
+                .replace(R.id.fragmentContainer, new SpecificDialogFragment())
+                .commitAllowingStateLoss();
+    }
+
+    @Override
+    public void backToDialogs() {
+        return;
     }
 }

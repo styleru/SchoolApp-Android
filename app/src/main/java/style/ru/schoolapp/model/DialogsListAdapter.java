@@ -12,14 +12,24 @@ import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import style.ru.schoolapp.R;
+import style.ru.schoolapp.presenter.DialogsPresenter;
 
 /**
  * Created by romananchugov on 11.08.2018.
  */
 
-public class DialogsAdapter extends RecyclerView.Adapter<DialogsAdapter.ViewHolder> {
+public class DialogsListAdapter extends RecyclerView.Adapter<DialogsListAdapter.ViewHolder> {
 
+    //TODO: dagger 2 for it
+    private DialogsPresenter presenter;
+
+    public DialogsListAdapter(DialogsPresenter presenter){
+        this.presenter = presenter;
+    }
 
     @NonNull
     @Override
@@ -37,6 +47,8 @@ public class DialogsAdapter extends RecyclerView.Adapter<DialogsAdapter.ViewHold
         TextDrawable drawable = TextDrawable.builder()
                 .buildRect("A", Color.RED);
         holder.imageView.setImageDrawable(drawable);
+
+
     }
 
     @Override
@@ -46,16 +58,25 @@ public class DialogsAdapter extends RecyclerView.Adapter<DialogsAdapter.ViewHold
 
     class ViewHolder extends RecyclerView.ViewHolder{
 
-        public ConstraintLayout constraintLayout;
-        public TextView textView;
-        public ImageView imageView;
+        ConstraintLayout constraintLayout;
 
-        public ViewHolder(View itemView) {
+        @BindView(R.id.teachersNameTv)
+        TextView textView;
+        @BindView(R.id.dialogImage)
+        ImageView imageView;
+
+        ViewHolder(View itemView) {
             super(itemView);
-            //TODO: butteknife
             constraintLayout = (ConstraintLayout) itemView;
+
+            ButterKnife.bind(this, constraintLayout);
             textView = constraintLayout.findViewById(R.id.teachersNameTv);
             imageView = constraintLayout.findViewById(R.id.dialogImage);
+        }
+
+        @OnClick(R.id.dialogItemContainer)
+        void clicked(View view){
+            presenter.dialogClicked();
         }
     }
 

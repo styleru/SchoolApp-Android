@@ -7,4 +7,6 @@ import com.arellomobile.mvp.MvpView;
  */
 
 public interface DialogsView extends MvpView {
+    void openSpecificDialog();
+    void backToDialogs();
 }
