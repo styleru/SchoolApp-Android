@@ -3,10 +3,12 @@ package style.ru.schoolapp.model;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.OnClick;
 import style.ru.schoolapp.R;
 
 /**
@@ -39,5 +41,11 @@ public class AllCoursesAdapter extends RecyclerView.Adapter<AllCoursesAdapter.Vi
             super(itemView);
             constraintLayout = (ConstraintLayout) itemView;
         }
+    }
+
+
+    @OnClick(R.id.specificCourseItem)
+    void itemClicked(View v){
+        Log.i("ROFL", "itemClicked: ");
     }
 }

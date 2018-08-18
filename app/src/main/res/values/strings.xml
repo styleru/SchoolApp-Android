@@ -4,4 +4,7 @@
     <string name="login_hint">Login</string>
     <string name="password_hint">Password</string>
     <string name="log_in">Log In</string>
+    <string name="specific_course_description_header">Описание</string>
+    <string name="specific_course_lectures_header">Лекторы</string>
+    <string name="specificEnrolled">Вы записаны</string>
 </resources>
