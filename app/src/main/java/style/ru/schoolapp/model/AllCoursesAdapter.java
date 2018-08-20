@@ -3,19 +3,25 @@ package style.ru.schoolapp.model;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.OnClick;
+import butterknife.ButterKnife;
 import style.ru.schoolapp.R;
+import style.ru.schoolapp.presenter.AllCoursesPresenter;
 
 /**
  * Created by romananchugov on 14.08.2018.
  */
 
 public class AllCoursesAdapter extends RecyclerView.Adapter<AllCoursesAdapter.ViewHolder> {
+
+    AllCoursesPresenter presenter;
+
+    public AllCoursesAdapter(AllCoursesPresenter presenter){
+        this.presenter = presenter;
+    }
 
     @NonNull
     @Override
@@ -35,17 +41,20 @@ public class AllCoursesAdapter extends RecyclerView.Adapter<AllCoursesAdapter.Vi
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-
         ConstraintLayout constraintLayout;
+
         public ViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
             constraintLayout = (ConstraintLayout) itemView;
+
+            constraintLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    presenter.itemClicked();
+                }
+            });
         }
     }
 
-
-    @OnClick(R.id.specificCourseItem)
-    void itemClicked(View v){
-        Log.i("ROFL", "itemClicked: ");
-    }
 }

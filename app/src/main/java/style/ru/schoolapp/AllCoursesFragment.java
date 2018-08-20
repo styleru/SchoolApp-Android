@@ -23,6 +23,7 @@ import style.ru.schoolapp.view.AllCoursesView;
  */
 
 public class AllCoursesFragment extends MvpAppCompatFragment implements AllCoursesView {
+    private static final String TAG = AllCoursesFragment.class.getSimpleName();
 
     @InjectPresenter
     AllCoursesPresenter presenter;
@@ -39,8 +40,19 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
 
         //TODO: injection for adapter
         recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(), 2));
-        recyclerView.setAdapter(new AllCoursesAdapter());
+        recyclerView.setAdapter(new AllCoursesAdapter(presenter));
 
         return view;
+    }
+
+    @Override
+    public void openSelectedCourse() {
+        getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new SpecificCourseFragment())
+                .commitAllowingStateLoss();
+    }
+
+    @Override
+    public void openListOfCourse() {
+        return;
     }
 }

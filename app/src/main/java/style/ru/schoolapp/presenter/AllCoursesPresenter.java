@@ -13,4 +13,12 @@ public class AllCoursesPresenter extends MvpPresenter<AllCoursesView> {
     public AllCoursesPresenter(){
 
     }
+
+    public void itemClicked(){
+        getViewState().openSelectedCourse();
+    }
+
+    public void backPressed(){
+        getViewState().openListOfCourse();
+    }
 }
