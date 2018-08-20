@@ -7,4 +7,6 @@
     <string name="specific_course_description_header">Описание</string>
     <string name="specific_course_lectures_header">Лекторы</string>
     <string name="specificEnrolled">Вы записаны</string>
+    <string name="description">Описание</string>
+    <string name="comment">Комментарий</string>
 </resources>
