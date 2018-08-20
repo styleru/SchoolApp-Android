@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Button button_enter = (Button) findViewById(R.id.Enter);
-        final TextView errorMessage = findViewById(R.id.errorMessage);
         button_enter.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
@@ -30,10 +29,12 @@ public class LoginActivity extends AppCompatActivity {
                 if (lg_string.equals("login") && pw_string.equals("password")) {
                     startActivity(intent);
                 }
-                else {
-                    errorMessage.setText("У вас неправильный пароль");
-                }
             }
         });
+    }
+
+    public void signUpClick(View view) {
+        Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+        startActivity(intent);
     }
 }

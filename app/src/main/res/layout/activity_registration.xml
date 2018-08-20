@@ -1,95 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#009688"
     android:orientation="vertical"
-    tools:context=".RegistrationActivity">
+    tools:context=".LoginActivity">
 
-        <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/styleru" />
 
         <TextView
-            android:id="@+id/Info"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:textAlignment="center"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:text="РЕГИСТРАЦИЯ"
-            android:textColor="#000"
-            android:textSize="25dp" />
-
-        <EditText
-            android:id="@+id/fullNameField"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="70dp"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:hint="FullName"
-            android:textColorHint="#000" />
-
-        <EditText
-            android:id="@+id/emailField"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:hint="Email"
-            android:textColorHint="#000" />
-
-        <EditText
-            android:id="@+id/passwordField"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:hint="Password"
-            android:textColorHint="#000" />
-
-        <CheckBox
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:text="Я согласен(-сна) с условияемями пользовательского соглашения "/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:text="Create. Run. Enjoy."
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_edittext_login"
+            android:hint="Имя и фамилия"
+            android:padding="10dp"
+            android:textCursorDrawable="@null" />
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#fff"
+            android:hint="Email"
+            android:padding="10dp"
+            android:textCursorDrawable="@null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_edittext_password"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="ПОКАЗАТЬ"
+                android:textColor="#000"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
 
         <Button
-            android:id="@+id/enterButton"
+            android:id="@+id/Enter"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:text="Sign Up"
+            android:background="@drawable/rounded_login_button"
+            android:text="Зарегистрироваться"
             android:textAllCaps="false"
-            android:textColorHint="#000" />
+            android:textColor="#FFFFFF"
+            android:textSize="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/Password"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:text="Уже есть аккаунт?"
@@ -98,10 +106,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
-                android:text="Sign In"
+                android:text="Войти"
+                android:onClick="signInClick"
                 android:layout_marginLeft="10dp"
                 android:textColor="#000"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
     </LinearLayout>
+
+</RelativeLayout>
