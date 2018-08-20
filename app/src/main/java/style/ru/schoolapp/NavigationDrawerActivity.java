@@ -60,37 +60,37 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.navAccount:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
-                        new MyAccountActivity()).commit();
-                getSupportActionBar().setTitle("Личный кабинет");
-                break;
-            case R.id.navCourses:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
-                        new AllCoursesActivity()).commit();
-                getSupportActionBar().setTitle("Все курсы");
-                break;
-            case R.id.navTimeTable:
-                Toast.makeText(this, "Timetable screen", Toast.LENGTH_SHORT).show();
-                getSupportActionBar().setTitle("Расписание");
-                break;
-            case R.id.navDialogs:
-                Toast.makeText(this, "Dialogs screen", Toast.LENGTH_SHORT).show();
-                getSupportActionBar().setTitle("Диалоги");
-                break;
-            case R.id.navHomeWork:
-                Toast.makeText(this, "Homework screen", Toast.LENGTH_SHORT).show();
-                getSupportActionBar().setTitle("Домашнее задание");
-                break;
-            case R.id.navAndroidCourse:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
-                        new SingleCourseActivity()).commit();
-                getSupportActionBar().setTitle("Android");
-                break;
-            case R.id.navExit:
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
-                break;
+//            case R.id.navAccount:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
+//                        new MyAccountActivity()).commit();
+//                getSupportActionBar().setTitle("Личный кабинет");
+//                break;
+//            case R.id.navCourses:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
+//                        new AllCoursesActivity()).commit();
+//                getSupportActionBar().setTitle("Все курсы");
+//                break;
+//            case R.id.navTimeTable:
+//                Toast.makeText(this, "Timetable screen", Toast.LENGTH_SHORT).show();
+//                getSupportActionBar().setTitle("Расписание");
+//                break;
+//            case R.id.navDialogs:
+//                Toast.makeText(this, "Dialogs screen", Toast.LENGTH_SHORT).show();
+//                getSupportActionBar().setTitle("Диалоги");
+//                break;
+//            case R.id.navHomeWork:
+//                Toast.makeText(this, "Homework screen", Toast.LENGTH_SHORT).show();
+//                getSupportActionBar().setTitle("Домашнее задание");
+//                break;
+//            case R.id.navAndroidCourse:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container,
+//                        new SingleCourseActivity()).commit();
+//                getSupportActionBar().setTitle("Android");
+//                break;
+//            case R.id.navExit:
+//                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+//                startActivity(intent);
+//                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

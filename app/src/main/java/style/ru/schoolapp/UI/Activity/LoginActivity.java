@@ -1,4 +1,4 @@
-package style.ru.schoolapp;
+package style.ru.schoolapp.UI.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import style.ru.schoolapp.MainActivity;
+import style.ru.schoolapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), NavigationDrawerActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 EditText login = (EditText) findViewById(R.id.Login);
                 EditText password = (EditText) findViewById(R.id.Password);
                 String lg_string = login.getText().toString();

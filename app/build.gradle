@@ -44,4 +44,8 @@ dependencies {
     // MaterialEditText
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
 
+    // Bottom Navigation View Ex
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
+    implementation "com.android.support:design:27.+"
+
 }

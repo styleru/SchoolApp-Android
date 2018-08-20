@@ -6,6 +6,7 @@
     <color name="accent">#8BC34A</color>
 
     <color name="grey">#bcbcbc</color>
+    <color name="white">#ffffff</color>
 
     <!--3F51B5-->
 </resources>

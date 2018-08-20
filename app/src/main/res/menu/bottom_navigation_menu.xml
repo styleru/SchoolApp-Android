@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <!--Домашнее задание-->
+        <item android:id="@+id/navHomeWork"
+            android:title=""
+            android:icon="@drawable/ic_school"/>
+
+        <!--Расписание-->
+        <item android:id="@+id/navTimeTable"
+            android:title=""
+            android:icon="@drawable/ic_timetable"/>
+
+        <!--Уведомления-->
+        <item android:id="@+id/navNotifications"
+            android:title=""
+            android:icon="@drawable/ic_notifications"/>
+
+        <!--Личный кабинет-->
+        <item android:id="@+id/navAccount"
+            android:title=""
+            android:icon="@drawable/ic_account"/>
+
+    </group>
+</menu>
+
+
+
+
+
+    <!--&lt;!&ndash;Личный кабинет&ndash;&gt;-->
+<!--<item android:id="@+id/navAccount"-->
+<!--android:title=""-->
+<!--android:icon="@drawable/account"/>-->
+
+    <!--&lt;!&ndash;Расписание&ndash;&gt;-->
+<!--<item android:id="@+id/navTimeTable"-->
+<!--android:title=""-->
+<!--android:icon="@drawable/timetable"/>-->
+
+    <!--&lt;!&ndash;Диалоги&ndash;&gt;-->
+<!--<item android:id="@+id/navDialogs"-->
+<!--android:title=""-->
+<!--android:icon="@drawable/dialogs"/>-->
+
+    <!--&lt;!&ndash;Домашнее задание&ndash;&gt;-->
+<!--<item android:id="@+id/navHomeWork"-->
+<!--android:title=""-->
+<!--android:icon="@drawable/assignment"/>-->
+
+    <!--&lt;!&ndash;Android&ndash;&gt;-->
+<!--<item android:id="@+id/navAndroidCourse"-->
+<!--android:title=""-->
+<!--android:icon="@drawable/assignment"/>-->
+
+    <!--&lt;!&ndash;Выход&ndash;&gt;-->
+<!--<item android:id="@+id/navExit"-->
+<!--android:title=""-->
+<!--android:icon="@drawable/exit"/>-->
+
