@@ -17,7 +17,6 @@ import style.ru.schoolapp.R;
 import style.ru.schoolapp.UI.Recyclers.EnrollmentRecyclerViewAdapter;
 
 public class EnrollmentActivity extends AppCompatActivity {
-
     private static final String TAG = "EnrollmentActivity";
     public static final int NUM_COLUMNS = 2;
     private ArrayList<String> mImageUrls = new ArrayList<>();
