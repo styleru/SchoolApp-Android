@@ -42,4 +42,7 @@ dependencies {
     //Text Drawable
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
 }

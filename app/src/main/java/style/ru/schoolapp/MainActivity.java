@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragmentContainer, new LoginFragment())
+                .replace(R.id.fragmentContainer, new AllCoursesFragment())
                 .commitAllowingStateLoss();
     }
 }
