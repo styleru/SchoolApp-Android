@@ -22,10 +22,11 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".UI.Activity.RegistrationActivity" />
         <!-- <activity android:name=".AllCoursesActivity" /> -->
-        <!--<activity android:name=".SingleCourseActivity" />-->
+        <!-- <activity android:name=".SingleCourseActivity" /> -->
         <!-- <activity android:name=".MyAccountActivity"></activity> -->
-        <!--<activity android:name=".AddCourseActivity" />-->
-        <activity android:name=".NavigationDrawerActivity"></activity>
+        <!-- <activity android:name=".AddCourseActivity" /> -->
+        <activity android:name=".NavigationDrawerActivity" />
+        <activity android:name=".UI.Activity.EnrollmentActivity"></activity>
     </application>
 
 </manifest>

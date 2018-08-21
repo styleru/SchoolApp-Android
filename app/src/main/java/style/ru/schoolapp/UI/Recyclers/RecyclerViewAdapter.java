@@ -1,4 +1,4 @@
-package style.ru.schoolapp;
+package style.ru.schoolapp.UI.Recyclers;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -15,8 +15,8 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import de.hdodenhof.circleimageview.CircleImageView;
+import style.ru.schoolapp.R;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
