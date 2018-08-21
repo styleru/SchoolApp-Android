@@ -9,6 +9,9 @@ import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
+import style.ru.schoolapp.UI.BottomNavigationActivity.AccountActivity;
+import style.ru.schoolapp.UI.BottomNavigationActivity.NotificationsActivity;
+
 public class BottomNavigationViewHelper {
 
     private static final String TAG = "BottomNavigationViewHel";
@@ -30,32 +33,26 @@ public class BottomNavigationViewHelper {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
 
-//                    case R.id.ic_house:
-//                        Intent mainIntent = new Intent(context, MainActivity.class);
-//                        context.startActivity(mainIntent);
-//                        break;
-//
-//                    case R.id.ic_search:
-//                        Intent searchIntent = new Intent(context, SearchActivity.class);
-//                        context.startActivity(searchIntent);
-//                        break;
-//
-//                    case R.id.ic_circle:
-//                        Intent shareIntent = new Intent(context, ShareActivity.class);
-//                        context.startActivity(shareIntent);
-//                        break;
-//
-//                    case R.id.ic_alert:
-//                        Intent likesIntent = new Intent(context, LikesActivity.class);
-//                        context.startActivity(likesIntent);
-//                        break;
-//
-//                    case R.id.ic_android:
-//                        Intent profileIntent = new Intent(context, ProfileActivity.class);
-//                        context.startActivity(profileIntent);
-//                        break;
-                }
+                    case R.id.navHomework:
+                        Intent mainIntent = new Intent(context, MainActivity.class);
+                        context.startActivity(mainIntent);
+                        break;
 
+                    case R.id.navTimetable:
+//                        Intent timetableIntent = new Intent(context, SearchActivity.class);
+//                        context.startActivity(timetableIntentIntent);
+                        break;
+
+                    case R.id.navNotifications:
+                        Intent notificationsIntent = new Intent(context, NotificationsActivity.class);
+                        context.startActivity(notificationsIntent);
+                        break;
+
+                    case R.id.navAccount:
+                        Intent myAccountIntent = new Intent(context, AccountActivity.class);
+                        context.startActivity(myAccountIntent);
+                        break;
+                }
                 return false;
             }
         });

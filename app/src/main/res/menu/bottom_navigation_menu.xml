@@ -4,12 +4,12 @@
     <group android:checkableBehavior="single">
 
         <!--Домашнее задание-->
-        <item android:id="@+id/navHomeWork"
+        <item android:id="@+id/navHomework"
             android:title=""
             android:icon="@drawable/ic_school"/>
 
         <!--Расписание-->
-        <item android:id="@+id/navTimeTable"
+        <item android:id="@+id/navTimetable"
             android:title=""
             android:icon="@drawable/ic_timetable"/>
 
@@ -25,38 +25,4 @@
 
     </group>
 </menu>
-
-
-
-
-
-    <!--&lt;!&ndash;Личный кабинет&ndash;&gt;-->
-<!--<item android:id="@+id/navAccount"-->
-<!--android:title=""-->
-<!--android:icon="@drawable/account"/>-->
-
-    <!--&lt;!&ndash;Расписание&ndash;&gt;-->
-<!--<item android:id="@+id/navTimeTable"-->
-<!--android:title=""-->
-<!--android:icon="@drawable/timetable"/>-->
-
-    <!--&lt;!&ndash;Диалоги&ndash;&gt;-->
-<!--<item android:id="@+id/navDialogs"-->
-<!--android:title=""-->
-<!--android:icon="@drawable/dialogs"/>-->
-
-    <!--&lt;!&ndash;Домашнее задание&ndash;&gt;-->
-<!--<item android:id="@+id/navHomeWork"-->
-<!--android:title=""-->
-<!--android:icon="@drawable/assignment"/>-->
-
-    <!--&lt;!&ndash;Android&ndash;&gt;-->
-<!--<item android:id="@+id/navAndroidCourse"-->
-<!--android:title=""-->
-<!--android:icon="@drawable/assignment"/>-->
-
-    <!--&lt;!&ndash;Выход&ndash;&gt;-->
-<!--<item android:id="@+id/navExit"-->
-<!--android:title=""-->
-<!--android:icon="@drawable/exit"/>-->
 

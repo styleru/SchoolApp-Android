@@ -27,7 +27,8 @@
         <!-- <activity android:name=".AddCourseActivity" /> -->
         <activity android:name=".NavigationDrawerActivity" />
         <activity android:name=".UI.Activity.EnrollmentActivity" />
-        <activity android:name=".UI.BottomNavigationActivity.NotificationsActivity"></activity>
+        <activity android:name=".UI.BottomNavigationActivity.NotificationsActivity" />
+        <activity android:name=".UI.BottomNavigationActivity.AccountActivity"></activity>
     </application>
 
 </manifest>

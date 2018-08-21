@@ -11,8 +11,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import style.ru.schoolapp.UI.BottomNavigationActivity.MyAccountActivity;
-
 public class NavigationDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawerLayout;
@@ -37,9 +35,9 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container, new MyAccountActivity()).commit();
-            navigationView.setCheckedItem(R.id.navAccount);
-            getSupportActionBar().setTitle("Личный кабинет");
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragmet_container, new MyAccountActivity()).commit();
+//            navigationView.setCheckedItem(R.id.navAccount);
+//            getSupportActionBar().setTitle("Личный кабинет");
         }
     }
 

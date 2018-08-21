@@ -13,7 +13,9 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 import style.ru.schoolapp.MainActivity;
+import style.ru.schoolapp.Model.Entity.Notification;
 import style.ru.schoolapp.R;
+import style.ru.schoolapp.UI.BottomNavigationActivity.NotificationsActivity;
 import style.ru.schoolapp.UI.Recyclers.EnrollmentRecyclerViewAdapter;
 
 public class EnrollmentActivity extends AppCompatActivity {
@@ -67,7 +69,7 @@ public class EnrollmentActivity extends AppCompatActivity {
     }
 
     public void skipSubmitClick(View view) {
-        Intent intent = new Intent(EnrollmentActivity.this, MainActivity.class);
+        Intent intent = new Intent(EnrollmentActivity.this, NotificationsActivity.class);
         startActivity(intent);
     }
 }
