@@ -9,4 +9,5 @@ import com.arellomobile.mvp.MvpView;
 public interface AllCoursesView extends MvpView {
     public void openSelectedCourse();
     public void openListOfCourse();
+    void openHomeworkFragment();
 }

@@ -8,10 +8,14 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import style.ru.schoolapp.presenter.AllCoursesPresenter;
 import style.ru.schoolapp.view.AllCoursesView;
 
@@ -24,6 +28,9 @@ public class SpecificCourseFragment extends MvpAppCompatFragment implements AllC
 
     @InjectPresenter
     AllCoursesPresenter allCoursesPresenter;
+
+    @BindView(R.id.specificCourseStatusBtn)
+    Button button;
 
     @Nullable
     @Override
@@ -46,6 +53,8 @@ public class SpecificCourseFragment extends MvpAppCompatFragment implements AllC
             }
         } );
 
+        ButterKnife.bind(this, view);
+
         return view;
     }
 
@@ -59,6 +68,17 @@ public class SpecificCourseFragment extends MvpAppCompatFragment implements AllC
         Log.i(TAG, "openListOfCourse: ");
         getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new AllCoursesFragment())
                 .commitAllowingStateLoss();
+    }
+
+    @Override
+    public void openHomeworkFragment() {
+        getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new HomewrokFragment())
+                .commitAllowingStateLoss();
+    }
+
+    @OnClick(R.id.specificCourseStatusBtn)
+    void btnClicked(){
+        allCoursesPresenter.statusButtonClicked();
     }
 
 

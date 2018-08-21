@@ -21,4 +21,10 @@ public class AllCoursesPresenter extends MvpPresenter<AllCoursesView> {
     public void backPressed(){
         getViewState().openListOfCourse();
     }
+
+    public void statusButtonClicked(){
+        getViewState().openHomeworkFragment();
+    }
+
+
 }

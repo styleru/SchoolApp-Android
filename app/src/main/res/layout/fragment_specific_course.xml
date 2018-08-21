@@ -74,7 +74,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/specificCourseStatus"
+        android:id="@+id/specificCourseStatusBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/specificEnrolled"

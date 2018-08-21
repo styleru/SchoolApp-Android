@@ -55,4 +55,9 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
     public void openListOfCourse() {
         return;
     }
+
+    @Override
+    public void openHomeworkFragment() {
+        return;
+    }
 }
