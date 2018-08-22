@@ -6,7 +6,8 @@
     android:layout_margin="5dp"
     android:background="@drawable/rounded_notification_item"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:layout_gravity="center">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,7 +39,16 @@
         android:layout_marginTop="10dp"
         android:text="Андроид пройдёт в аудитории 516"
         android:textColor="#fff"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:paddingBottom="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/okButton"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_ok_button"
+        android:text="OK"/>
 
 
 </LinearLayout>

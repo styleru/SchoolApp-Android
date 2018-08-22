@@ -1,6 +1,7 @@
 
 package style.ru.schoolapp.UI.BottomNavigationActivity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -30,6 +33,8 @@ public class NotificationsActivity extends AppCompatActivity {
     private ArrayList<Notification> notifications = new ArrayList<>();
     private static final int ACTIVITY_NUM = 2;
 
+    private Dialog myDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,8 @@ public class NotificationsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Уведомления");
         toolbar.setTitleTextColor(android.graphics.Color.WHITE);
+
+        myDialog = new Dialog(this);
 
         Log.d(TAG, "initImageBitMaps: preparing bitmaps");
         notifications.add(new Notification("Изменение аудитории!", "22.09.2018", "Андроид пройдёт в 534 аудитории"));
@@ -80,5 +87,22 @@ public class NotificationsActivity extends AppCompatActivity {
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+    }
+
+    public void itemClick(View view) {
+        Button okButton;
+
+        myDialog.setContentView(R.layout.notification_popup);
+        okButton = myDialog.findViewById(R.id.okButton);
+
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.show();
+
+
     }
 }

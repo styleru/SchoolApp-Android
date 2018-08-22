@@ -40,7 +40,7 @@ public class AccountActivity extends AppCompatActivity {
     private void initContent() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Мой аккаунт");
+        getSupportActionBar().setTitle("Иван Иванов");
         toolbar.setTitleTextColor(android.graphics.Color.WHITE);
 
         Log.d(TAG, "initImageBitMaps: preparing bitmaps");
