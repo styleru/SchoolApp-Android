@@ -16,8 +16,8 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import style.ru.schoolapp.presenter.AllCoursesPresenter;
-import style.ru.schoolapp.view.AllCoursesView;
+import style.ru.schoolapp.mvp.allCourses.AllCoursesPresenter;
+import style.ru.schoolapp.mvp.allCourses.AllCoursesView;
 
 /**
  * Created by romananchugov on 18.08.2018.

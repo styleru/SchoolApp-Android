@@ -1,9 +1,7 @@
-package style.ru.schoolapp.presenter;
+package style.ru.schoolapp.mvp.allCourses;
 
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
-
-import style.ru.schoolapp.view.AllCoursesView;
 
 /**
  * Created by romananchugov on 14.08.2018.

@@ -45,4 +45,7 @@ dependencies {
     //Circle ImageView
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
+    //Cicerone
+    compile 'ru.terrakok.cicerone:cicerone:3.0.0'
+
 }
