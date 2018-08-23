@@ -12,8 +12,11 @@ import android.view.ViewGroup;
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import ru.terrakok.cicerone.Router;
 import style.ru.schoolapp.mvp.allCourses.AllCoursesAdapter;
 import style.ru.schoolapp.mvp.allCourses.AllCoursesPresenter;
 import style.ru.schoolapp.mvp.allCourses.AllCoursesView;
@@ -31,6 +34,15 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
     @BindView(R.id.allCoursesRv)
     RecyclerView recyclerView;
 
+    @Inject
+    Router router;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        SchoolApplication.INSTANCE.getAppComponent().inject(this);
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,8 +59,7 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
 
     @Override
     public void openSelectedCourse() {
-        getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new SpecificCourseFragment())
-                .commitAllowingStateLoss();
+        router.navigateTo(Screens.SPECIFIC_COURSE_SCREEN);
     }
 
     @Override

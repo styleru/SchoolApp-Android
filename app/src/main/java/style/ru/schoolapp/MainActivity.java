@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
+import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
 
 import javax.inject.Inject;
 
@@ -11,9 +13,14 @@ import ru.terrakok.cicerone.Navigator;
 import ru.terrakok.cicerone.NavigatorHolder;
 import ru.terrakok.cicerone.Router;
 import ru.terrakok.cicerone.android.SupportFragmentNavigator;
+import style.ru.schoolapp.mvp.main.MainPresenter;
+import style.ru.schoolapp.mvp.main.MainView;
 
-public class MainActivity extends MvpAppCompatActivity {
+public class MainActivity extends MvpAppCompatActivity implements MainView {
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    @InjectPresenter
+    MainPresenter presenter;
 
     @Inject
     Router router;
@@ -21,11 +28,23 @@ public class MainActivity extends MvpAppCompatActivity {
     @Inject
     NavigatorHolder navigatorHolder;
 
+    @ProvidePresenter
+    MainPresenter provideMainPresenter() {
+        return new MainPresenter(router);
+    }
+
 
     private Navigator navigator = new SupportFragmentNavigator(getSupportFragmentManager(), R.id.fragmentContainer) {
         @Override
         protected Fragment createFragment(String screenKey, Object data) {
-            return new SpecificCourseFragment();
+            switch (screenKey) {
+                case Screens.ALL_COURSES_SCREEN:
+                    return new AllCoursesFragment();
+                case Screens.SPECIFIC_COURSE_SCREEN:
+                    return new SpecificCourseFragment();
+                default:
+                    return null;
+            }
         }
 
         @Override
@@ -46,7 +65,7 @@ public class MainActivity extends MvpAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TODO: mvp for MainActivity
+        presenter.onCreateActivity(this);
     }
 
     @Override
