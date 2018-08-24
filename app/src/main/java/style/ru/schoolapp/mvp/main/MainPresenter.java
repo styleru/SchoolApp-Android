@@ -4,7 +4,6 @@ import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 
 import ru.terrakok.cicerone.Router;
-import style.ru.schoolapp.MainActivity;
 import style.ru.schoolapp.Screens;
 
 @InjectViewState
@@ -16,7 +15,7 @@ public class MainPresenter extends MvpPresenter<MainView> {
         this.router = router;
     }
 
-    public void onCreateActivity(MainActivity activity){
+    public void onCreateActivity(){
        router.navigateTo(Screens.ALL_COURSES_SCREEN);
     }
 }

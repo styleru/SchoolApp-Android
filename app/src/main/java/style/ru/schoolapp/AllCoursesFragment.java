@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
 
 import javax.inject.Inject;
 
@@ -37,8 +38,14 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
     @Inject
     Router router;
 
+    @ProvidePresenter
+    AllCoursesPresenter provideAllCoursesPresenter(){
+        return new AllCoursesPresenter(router);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //TODO: to understand how does it works
         SchoolApplication.INSTANCE.getAppComponent().inject(this);
         super.onCreate(savedInstanceState);
     }

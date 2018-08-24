@@ -42,6 +42,8 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
                     return new AllCoursesFragment();
                 case Screens.SPECIFIC_COURSE_SCREEN:
                     return new SpecificCourseFragment();
+                case Screens.HOMEWORK_SCREEN:
+                    return new HomewrokFragment();
                 default:
                     return null;
             }
@@ -65,7 +67,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter.onCreateActivity(this);
+        presenter.onCreateActivity();
     }
 
     @Override
@@ -80,4 +82,9 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
         super.onPause();
     }
 
+    @Override
+    public void onBackPressed() {
+        //TODO: case with clear activity
+        router.exit();
+    }
 }

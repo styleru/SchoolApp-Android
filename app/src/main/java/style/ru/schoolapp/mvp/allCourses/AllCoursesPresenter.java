@@ -3,26 +3,21 @@ package style.ru.schoolapp.mvp.allCourses;
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 
+import ru.terrakok.cicerone.Router;
+import style.ru.schoolapp.Screens;
+
 /**
  * Created by romananchugov on 14.08.2018.
  */
 @InjectViewState
 public class AllCoursesPresenter extends MvpPresenter<AllCoursesView> {
-    public AllCoursesPresenter(){
+    private Router router;
 
+    public AllCoursesPresenter(Router router){
+        this.router = router;
     }
 
     public void itemClicked(){
-        getViewState().openSelectedCourse();
+        router.navigateTo(Screens.SPECIFIC_COURSE_SCREEN);
     }
-
-    public void backPressed(){
-        getViewState().openListOfCourse();
-    }
-
-    public void statusButtonClicked(){
-        getViewState().openHomeworkFragment();
-    }
-
-
 }
