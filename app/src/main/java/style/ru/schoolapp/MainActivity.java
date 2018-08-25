@@ -19,6 +19,8 @@ import style.ru.schoolapp.mvp.main.MainView;
 public class MainActivity extends MvpAppCompatActivity implements MainView {
     private static final String TAG = MainActivity.class.getSimpleName();
 
+    //TODO: remade all router calls with view state in presenters
+
     @InjectPresenter
     MainPresenter presenter;
 
@@ -67,7 +69,9 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter.onCreateActivity();
+        if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+            presenter.onCreateActivity();
+        }
     }
 
     @Override
@@ -85,6 +89,6 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
     @Override
     public void onBackPressed() {
         //TODO: case with clear activity
-        router.exit();
+        presenter.onBackPressed();
     }
 }

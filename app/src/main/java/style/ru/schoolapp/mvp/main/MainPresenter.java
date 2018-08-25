@@ -18,4 +18,8 @@ public class MainPresenter extends MvpPresenter<MainView> {
     public void onCreateActivity(){
        router.navigateTo(Screens.ALL_COURSES_SCREEN);
     }
+
+    public void onBackPressed(){
+        router.exit();
+    }
 }
