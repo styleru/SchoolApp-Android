@@ -1,4 +1,4 @@
-package style.ru.schoolapp.view;
+package style.ru.schoolapp.mvp.specificCourse;
 
 import com.arellomobile.mvp.MvpView;
 

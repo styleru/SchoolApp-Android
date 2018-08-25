@@ -1,4 +1,4 @@
-package style.ru.schoolapp.model;
+package style.ru.schoolapp.mvp.allCourses;
 
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import style.ru.schoolapp.R;
-import style.ru.schoolapp.presenter.AllCoursesPresenter;
 
 /**
  * Created by romananchugov on 14.08.2018.

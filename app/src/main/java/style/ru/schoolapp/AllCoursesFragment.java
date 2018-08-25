@@ -11,12 +11,16 @@ import android.view.ViewGroup;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import style.ru.schoolapp.model.AllCoursesAdapter;
-import style.ru.schoolapp.presenter.AllCoursesPresenter;
-import style.ru.schoolapp.view.AllCoursesView;
+import ru.terrakok.cicerone.Router;
+import style.ru.schoolapp.mvp.allCourses.AllCoursesAdapter;
+import style.ru.schoolapp.mvp.allCourses.AllCoursesPresenter;
+import style.ru.schoolapp.mvp.allCourses.AllCoursesView;
 
 /**
  * Created by romananchugov on 14.08.2018.
@@ -30,6 +34,21 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
 
     @BindView(R.id.allCoursesRv)
     RecyclerView recyclerView;
+
+    @Inject
+    Router router;
+
+    @ProvidePresenter
+    AllCoursesPresenter provideAllCoursesPresenter(){
+        return new AllCoursesPresenter(router);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        //TODO: to understand how does it works
+        SchoolApplication.INSTANCE.getAppComponent().inject(this);
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
@@ -47,8 +66,7 @@ public class AllCoursesFragment extends MvpAppCompatFragment implements AllCours
 
     @Override
     public void openSelectedCourse() {
-        getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new SpecificCourseFragment())
-                .commitAllowingStateLoss();
+        router.navigateTo(Screens.SPECIFIC_COURSE_SCREEN);
     }
 
     @Override
