@@ -7,16 +7,16 @@ import android.view.View;
 
 import style.ru.schoolapp.R;
 
-public class RegistrationActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_signup);
     }
 
     public void signInClick(View view) {
-        Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+        Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 }

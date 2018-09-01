@@ -7,11 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.BindViews;
 import style.ru.schoolapp.R;
 
 public class LoginActivity extends AppCompatActivity {
+
+    Button button_enter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void init() {
-        Button button_enter = (Button) findViewById(R.id.Enter);
+        button_enter = (Button) findViewById(R.id.Enter);
         button_enter.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
@@ -42,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void signUpClick(View view) {
-        Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+        Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
         startActivity(intent);
     }
 }

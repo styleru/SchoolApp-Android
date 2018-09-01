@@ -68,7 +68,7 @@ public class EnrollmentActivity extends AppCompatActivity {
     }
 
     public void skipSubmitClick(View view) {
-        //Intent intent = new Intent(EnrollmentActivity.this, NotificationsActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(EnrollmentActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

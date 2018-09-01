@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#009688"
     android:orientation="vertical"
-    tools:context=".mvp.UI.Activity.RegistrationActivity">
+    tools:context=".mvp.UI.Activity.SignupActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

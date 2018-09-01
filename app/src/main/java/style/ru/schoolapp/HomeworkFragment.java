@@ -13,7 +13,7 @@ import com.arellomobile.mvp.MvpAppCompatFragment;
  * Created by romananchugov on 21.08.2018.
  */
 
-public class HomewrokFragment extends MvpAppCompatFragment {
+public class HomeworkFragment extends MvpAppCompatFragment {
 
     @Nullable
     @Override

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <!--Домашнее задание-->
+        <item android:id="@+id/navHomework"
+            android:title=""
+            android:icon="@drawable/ic_school"/>
+
+        <!--Расписание-->
+        <item android:id="@+id/navTimetable"
+            android:title=""
+            android:icon="@drawable/ic_timetable"/>
+
+        <!--Уведомления-->
+        <item android:id="@+id/navNotifications"
+            android:title=""
+            android:icon="@drawable/ic_notifications"/>
+
+        <!--Личный кабинет-->
+        <item android:id="@+id/navAccount"
+            android:title=""
+            android:icon="@drawable/ic_account"/>
+
+    </group>
+</menu>
