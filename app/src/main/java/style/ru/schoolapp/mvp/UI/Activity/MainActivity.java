@@ -1,5 +1,6 @@
 package style.ru.schoolapp.mvp.UI.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -7,23 +8,33 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
+import java.util.ArrayList;
+
 import style.ru.schoolapp.HomeworkFragment;
 import style.ru.schoolapp.R;
 import style.ru.schoolapp.SchoolApplication;
+import style.ru.schoolapp.mvp.Model.Notification;
 import style.ru.schoolapp.mvp.UI.BottomNavigationFragments.AccountFragment;
+import style.ru.schoolapp.mvp.UI.BottomNavigationFragments.CoursesFragment;
 import style.ru.schoolapp.mvp.UI.BottomNavigationFragments.NotificationsFragment;
 import style.ru.schoolapp.mvp.UI.BottomNavigationViewHelper;
+import style.ru.schoolapp.mvp.UI.Recyclers.NotificationRecyclerViewAdapter;
 import style.ru.schoolapp.mvp.main.MainView;
 
 public class MainActivity extends MvpAppCompatActivity implements MainView {
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    private Context context = MainActivity.this;
 
     Toolbar toolbar;
     private static final int ACTIVITY_NUM = 2;
@@ -61,7 +72,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
                     Fragment selectedFragment = null;
                     switch (item.getItemId()) {
                         case R.id.navHomework:
-                            selectedFragment = new HomeworkFragment();
+                            selectedFragment = new CoursesFragment();
                             getSupportActionBar().setTitle("Домашнее задание");
                             break;
                         case R.id.navTimetable:
@@ -107,6 +118,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
 
 
