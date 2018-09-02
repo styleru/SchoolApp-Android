@@ -48,4 +48,7 @@ dependencies {
     //Cicerone
     compile 'ru.terrakok.cicerone:cicerone:3.0.0'
 
+    //TimetableFragment
+    compile 'com.github.greasemonk:timetable:1.2.0'
+
 }

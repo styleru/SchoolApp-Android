@@ -15,6 +15,7 @@ import ru.terrakok.cicerone.Router;
 import ru.terrakok.cicerone.android.SupportFragmentNavigator;
 import style.ru.schoolapp.mvp.main.MainPresenter;
 import style.ru.schoolapp.mvp.main.MainView;
+import style.ru.schoolapp.mvp.timetable.TimetableFragment;
 
 public class MainActivity extends MvpAppCompatActivity implements MainView {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -45,7 +46,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
                 case Screens.SPECIFIC_COURSE_SCREEN:
                     return new SpecificCourseFragment();
                 case Screens.HOMEWORK_SCREEN:
-                    return new HomewrokFragment();
+                    return new TimetableFragment();
                 default:
                     return null;
             }
