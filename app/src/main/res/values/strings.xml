@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Style RU</string>
+    <string name="app_name">StyleruApp</string>
     <string name="login_header">ВОЙТИ</string>
     <string name="login_hint">Login</string>
     <string name="password_hint">Password</string>
@@ -9,4 +9,12 @@
     <string name="specificEnrolled">Вы записаны</string>
     <string name="description">Описание</string>
     <string name="comment">Комментарий</string>
+    <string name="enter">Войти</string>
+    <string name="forget">Забыли?</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="profile">Профиль</string>
+    <string name="events">События</string>
+    <string name="people">Люди</string>
+    <string name="directions">Направления</string>
 </resources>
