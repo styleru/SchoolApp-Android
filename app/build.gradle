@@ -63,4 +63,7 @@ dependencies {
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     implementation "com.android.support:design:27.+"
 
+    //TimetableFragment
+    compile 'com.github.greasemonk:timetable:1.2.0'
+
 }
